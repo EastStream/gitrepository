@@ -26,6 +26,11 @@ git commit -m "wrote a readme file"
 ```
 
 ```Bash
+git pull
+git push
+```
+
+```Bash
 git status -sb
 git log
 ```
