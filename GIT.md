@@ -1,7 +1,7 @@
 GIT
 ===
 
-#基本操作
+###基本操作
 查询config
 ```
 git config --system --list
@@ -36,7 +36,7 @@ git log
 ```
 
 
-#SSHkey
+###SSHkey
 ```Bash
 ssh-keygen -t ed25519 -C "email@example.com"
 ```
