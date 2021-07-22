@@ -113,7 +113,7 @@ ssh -T git@github.com
 rm -rf ~/.ssh/*
 ```
 
->可参考上面理解
+可参考上面理解
 ```Bash
 ssh-keygen -t rsa -b 4096 -C "email@example.com"
 ```
