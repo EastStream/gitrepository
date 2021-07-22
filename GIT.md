@@ -8,7 +8,7 @@ git config --system --list
 git config --global --list
 git config --local --list
 ```
-
+配置config
 ```Bash
 git config --global user.name "Your Name"
 git config --global user.email "email@example.com"
@@ -45,7 +45,7 @@ ssh-keygen -t ed25519 -C "email@example.com"
 ssh-keygen -p -f ~/.ssh/id_ed25519 #exchange
 ```
 
->自动运行ssh-agent：以下内容粘贴到~/.profile 或 ~/.bashrc文件中。
+自动运行ssh-agent：以下内容粘贴到~/.profile 或 ~/.bashrc文件中。
 ```Bash
 env=~/.ssh/agent.env
 
@@ -85,7 +85,7 @@ fi
 unset env
 ```
 
->手动启动
+手动启动
 ```Bash
 # start the ssh-agent in the background
 eval "$(ssh-agent -s)"
@@ -125,5 +125,3 @@ cat ~/.ssh/id_rsa.pub
 ```Bash
 ssh -T git@github.com
 ```
-
-#
