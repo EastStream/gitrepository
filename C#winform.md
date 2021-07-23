@@ -46,3 +46,18 @@ if（e!=null）
 }
 ```
 在这段代码中，CLR核实o是否兼容于Employee类型；如果是，as会返回对同一个对象的一个非null引用。如果不兼容，返回null。as操作符造成CLR只校验一次对象的类型。if语句只是检查e是否为null。
+
+----------
+
+C#入门经典
+===
+
+OOR:面向对象编程技术
+CTS(Common Type System):通用类型系统
+CLR(Common Language Runtime):公共语言运行库
+
+CIL(Common Intermediate Language):通用中间语言
+JIT(Just-In-Time)编译器
+
+GAC(Global Assembly Cache):全局程序集缓存
+
