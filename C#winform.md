@@ -16,13 +16,13 @@ assembly, 这里把它翻译为配件, 以示和组件(Component)加以区别。
 ####（CLR-Via-C#） 类型基础
 CLR要求每个类型最终都派生自System.Object
 Object提供的公共方法：
-* Equals: 如果两个对象具有相同的值，就返回true
+* Equals：如果两个对象具有相同的值，就返回true
 * GetHashCode: 返回对象的哈希码
 * ToString：默认返回类型的完整名称（this.GetType().FullName）
 * GetType: 返回从type派生的一个实例
 
 object的protected方法：
-* MemberwiseClone:这个非虚方法创建类型的新实例，并将新对象的实例字段设与* this的字段完全一致
+* MemberwiseClone:这个非虚方法创建类型的新实例，并将新对象的实例字段设与this的字段完全一致
 * Finalize:在垃圾回收器判断对象应该作为垃圾回收之后。在对象的内存被实际回收之前，会调用这个虚方法。需要在回收内存钱执行清理工作的类型，应该重写该方法。
 
 所有对象都需要使用new操作符。
@@ -49,6 +49,13 @@ if（e!=null）
 
 ----------
 
+关键字
+---
+abstract  抽象
+sealed    禁止继承(类似java的final)
+
+
+
 C#入门经典
 ===
 
@@ -60,4 +67,61 @@ CIL(Common Intermediate Language):通用中间语言
 JIT(Just-In-Time)编译器
 
 GAC(Global Assembly Cache):全局程序集缓存
+
+GC(garbage collection):垃圾回收
+
+OOP(Object-Oriented Programming):L面向对象编程
+
+ 类型
+
+    sbyte   System.SByte
+    byte    System.Byte
+    short   System.Int16
+    ushort  System.UInt16
+    int     System.Int32
+    uint    System.UInt32   u U
+    long    System.Int64    l L
+    ulong   System.UInt64   ul UL
+    float   System.Single   f F
+    double  System.Double   d D
+    decimal System.Decimal  m M
+    char    System.Char
+    bool    System.Boolean
+    string  System.String
+
+占位符
+```c#
+Console.WriteLine("{0} {1}", myString, myInteger);
+```
+
+string.Trim()
+string.Pad()
+@字符串
+```c#
+"C:\\Temp\\MyDir\\MyFile.doc"
+@"C:\Temp\MyDir\MyFile.doc"
+```
+
+溢出检查关键字
+Solution Explorer->Properties->Build->Advanced->Check for arithmetic overflow/underflow
+
+    checked
+    unchecked
+
+总进行溢出检查
+
+    Convert.ToBoolean(val)
+    Convert.ToByte(val)
+    Convert.ToChar(val)
+    Convert.ToDecimal(val)
+    Convert.ToDouble(val)
+    Convert.ToInt16(val)
+    Convert.ToInt32(val)
+    Convert.ToInt64(val)
+    Convert.ToSByte(val)
+    Convert.ToSingle(val)
+    Convert.ToString(val)
+    Convert.ToUInt16(val)
+    Convert.ToUInt32(val)
+    Convert.ToUInt64(val)
 
