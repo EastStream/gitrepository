@@ -1,9 +1,6 @@
 C#
 ===
 
-winform
----
-
 ###CLR FCL IL
 CLR是公共语言运行时，Common Language Runtime)和Java虚拟机一样也是一个运行时环境，它负责资源管理（内存分配和垃圾收集），并保证应用和底层操作系统之间必要的分离。
 
@@ -47,14 +44,120 @@ if（e!=null）
 ```
 在这段代码中，CLR核实o是否兼容于Employee类型；如果是，as会返回对同一个对象的一个非null引用。如果不兼容，返回null。as操作符造成CLR只校验一次对象的类型。if语句只是检查e是否为null。
 
-----------
+-------------------
 
 关键字
 ---
 abstract  抽象
 sealed    禁止继承(类似java的final)
+internal  内部的
 
+-------------------
 
+Winform
+---
+    Name
+    Text
+    Font
+    Location
+    Size
+      MaximumSize
+      MinumumSize
+    
+    Anchor
+    Dock
+```c#
+void  MouseDown();
+void  MouseMove();
+void  MouseUp();
+```
+
+###Form
+    AutoScaleMode                               // 窗口缩放
+```c#
+void    Load();
+void    FormClosed();
+void    FormClosing();
+```
+
+###Panel
+
+###Label
+    Alegn
+
+###TextBox
+
+###RichTextBox
+```c#
+void  Select(SelectionStart, SelectionLength);
+void  ScrollToCaret();
+
+void  TextChanged();
+```
+
+###Button
+
+```c#
+void  Click();
+```
+
+###CombBox
+    Items
+    DropDownStyle
+
+    SelectedIndex
+    SelectedItem
+
+###NumericUpDown
+    DecimalPlaces
+    Increment
+    Maximum
+    Minimum
+
+```c#
+void    ValueChanged();
+```
+
+###DataGridView
+    SelectionMode
+    CellStyle
+    VitualMode
+```c#
+void  CellFormatting();
+```
+
+###GroupBox
+
+###StatusStrip
+    RightToLeft
+
+###FlowLayoutPanel
+
+###DateTimePicker
+
+###ProgressBar
+
+###FolderBrowerDialog
+    Description
+    RootFolder
+    SelectedPath
+    ShowNewFolderButton
+```c#
+DialogResult  ShowDialog();
+```
+
+###BackgroundWorker
+    WorkerReportsProgress
+```c#
+void  DoWork();
+void  ProgressChanged();
+void  RunWorkerCompleted();
+```
+
+###Timer
+    Interval
+
+-------------------
 
 C#入门经典
 ===
@@ -70,7 +173,8 @@ GAC(Global Assembly Cache):全局程序集缓存
 
 GC(garbage collection):垃圾回收
 
-OOP(Object-Oriented Programming):L面向对象编程
+OOP(Object-Oriented Programming):面向对象编程
+UML(Universal Modeling Language):通用建模语言 
 
  类型
 
@@ -125,3 +229,44 @@ Solution Explorer->Properties->Build->Advanced->Check for arithmetic overflow/un
     Convert.ToUInt32(val)
     Convert.ToUInt64(val)
 
+委托：存储函数引用的类型
+delegate
+
+Console.WriteLine()
+Debug.Write()
+Trace.Write()
+Debug.WriteLine(<message>, <category>)
+Trace.WriteLine(<message>, <category>)
+<category>:<message>
+Debug.WriteIf()
+Trace.WriteIf()
+Debug.WriteLineIf()
+Trace.WriteLineIf()
+
+事件
+
+类
+类库
+结构是值类型
+
+System.Object
+```c#
+Object()
+~Object()     Finalize()
+bool          Equals()
+bool          ReferenceEquals()
+string        ToString()
+object        MemberwiseCline()
+System.Type   GetType()
+int           GetHashCode()
+```
+
+|:-:|
+|ClassName|
+|:-|
+|+Name1:Type|
+|-Name2:Type|
+|+Func(Type name):Type|
++表示公有成员，-表示私有成员
+
+IDisposable         Dispose()
