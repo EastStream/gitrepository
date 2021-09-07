@@ -1,7 +1,7 @@
 C#
 ===
 
-###CLR FCL IL
+### CLR FCL IL
 CLR是公共语言运行时，Common Language Runtime)和Java虚拟机一样也是一个运行时环境，它负责资源管理（内存分配和垃圾收集），并保证应用和底层操作系统之间必要的分离。
 
 .net框架中包括有一组.net框架类库（Framework Class Library,简称FCL）程序集，其中含 有几千个类型的定义，每个类型都提供了某种功能。
@@ -10,7 +10,7 @@ IL称为(interpretative language 解释语言)。
 
 assembly, 这里把它翻译为配件, 以示和组件(Component)加以区别。
 
-####（CLR-Via-C#） 类型基础
+#### (CLR-Via-C#) 类型基础
 CLR要求每个类型最终都派生自System.Object
 Object提供的公共方法：
 * Equals：如果两个对象具有相同的值，就返回true
@@ -25,7 +25,7 @@ object的protected方法：
 所有对象都需要使用new操作符。
 类型转换异常 InvalidCastException。
 
-####is和as
+#### is和as
 is检查一个对象是否兼容于指定的类型，返回Boolean值。注意is操作符永远不会抛异常。is操作符通常这样使用：
 ```c#
 if（o is Employee）
@@ -72,7 +72,7 @@ void  MouseMove();
 void  MouseUp();
 ```
 
-###Form
+### Form
     AutoScaleMode                               // 窗口缩放
 ```c#
 void    Load();
@@ -80,14 +80,14 @@ void    FormClosed();
 void    FormClosing();
 ```
 
-###Panel
+### Panel
 
-###Label
+### Label
     Alegn
 
-###TextBox
+### TextBox
 
-###RichTextBox
+### RichTextBox
 ```c#
 void  Select(SelectionStart, SelectionLength);
 void  ScrollToCaret();
@@ -95,20 +95,34 @@ void  ScrollToCaret();
 void  TextChanged();
 ```
 
-###Button
+### Button
 
 ```c#
 void  Click();
 ```
 
-###CombBox
+### CombBox
     Items
     DropDownStyle
 
     SelectedIndex
     SelectedItem
 
-###NumericUpDown
+### CheckedListBox
+    Items
+
+    SelectedItem
+    SelectedItems
+```c#
+void    SetItemChecked();
+bool    GetItemChecked();
+
+void    ItemCheck();
+void    SelectedIndexChanged();
+void    SelectedValuedChanged();
+```
+
+### NumericUpDown
     DecimalPlaces
     Increment
     Maximum
@@ -118,7 +132,7 @@ void  Click();
 void    ValueChanged();
 ```
 
-###DataGridView
+### DataGridView
     SelectionMode
     CellStyle
     VitualMode
@@ -126,18 +140,20 @@ void    ValueChanged();
 void  CellFormatting();
 ```
 
-###GroupBox
+### GroupBox
 
-###StatusStrip
+### StatusStrip
     RightToLeft
 
-###FlowLayoutPanel
+### FlowLayoutPanel
 
-###DateTimePicker
+### DateTimePicker
 
-###ProgressBar
+### ProgressBar
 
-###FolderBrowerDialog
+### TrackBar
+
+### FolderBrowerDialog
     Description
     RootFolder
     SelectedPath
@@ -146,7 +162,7 @@ void  CellFormatting();
 DialogResult  ShowDialog();
 ```
 
-###BackgroundWorker
+### BackgroundWorker
     WorkerReportsProgress
 ```c#
 void  DoWork();
@@ -154,7 +170,7 @@ void  ProgressChanged();
 void  RunWorkerCompleted();
 ```
 
-###Timer
+### Timer
     Interval
 
 -------------------

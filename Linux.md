@@ -29,7 +29,9 @@ startx
 ```
 
 ```shell
+su
 exit
+sudo
 ls
 date
 cal
@@ -84,9 +86,10 @@ halt
 poweroff
 ```
 
-    /etc/passwd     root密码
-    /etc/shadow     个人密码
-    /etc/group      组名
+    /etc/passwd         root密码
+    /etc/shadow         个人密码
+    /etc/group          组名
+    /etc/locale.conf    
 
 文件类型 d:目录 -:文件 l:link b:接口设备 c:串行端口 s:资料接口文件 p:数据输送文件
 ```shell
@@ -99,3 +102,24 @@ touch
 ```
 
 ##systemd
+
+FHS(Filesystem Hierarchy Standard)文件系统层次化标准
+|||
+|-|-|
+|/bin||
+|/boot||
+|/dev||
+|/etc||
+|/lib||
+|/media||
+|/mnt||
+|/opt||
+|/run||
+|/sbin||
+|/srv||
+|/tmp||
+|/usr||
+|/var||
+|/home||
+|/lib<qual>||
+|/root||
