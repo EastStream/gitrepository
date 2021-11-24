@@ -136,9 +136,28 @@ void    ValueChanged();
     SelectionMode
     CellStyle
     VitualMode
+
+    FirstDisplayedScrollingRowIndex
 ```c#
-void  CellFormatting();
+void CellValueNeeded();
+void CellFormatting();
+void Invalidate();
+void InvalidateRow();
+void InvalidateColumn();
+void InvalidateCell();
 ```
+
+### Chart
+    Series
+        Name
+        LegendText
+        ChartArea
+        ChartType
+        XValueType
+    ChartAreas
+        AxisX
+            IsLabelAutoFit
+        AxisY
 
 ### GroupBox
 
@@ -158,6 +177,15 @@ void  CellFormatting();
     RootFolder
     SelectedPath
     ShowNewFolderButton
+```c#
+DialogResult  ShowDialog();
+```
+
+### OpenFileDialog
+    FileName
+    Filter
+    FilterIndex
+    RestoreDirectory
 ```c#
 DialogResult  ShowDialog();
 ```
